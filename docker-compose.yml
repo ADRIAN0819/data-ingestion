@@ -2,20 +2,19 @@ version: "3.9"
 
 x-common: &common
   env_file: .env
-  restart: on-failure         # 🔄 reinicia contenedor si la API falla
+  restart: on-failure       # reinicia si falla
   networks: [ingest_net]
 
 services:
   ms1_ingest:
     <<: *common
     build:
-      context: .                 # ← raíz del repo, no ms1
+      context: .
       dockerfile: ingestion/ms1/Dockerfile
     volumes:
       - ./ingestion/data/ms1:/app/data
-    depends_on: []            # si algún día llamas a otro contenedor
 
-    ms2_ingest:
+  ms2_ingest:               # ← mismo nivel que ms1_ingest
     <<: *common
     build:
       context: .
@@ -25,11 +24,12 @@ services:
 
   ms3_ingest:
     <<: *common
-    build: ./ingestion/ms3
+    build:
+      context: .
+      dockerfile: ingestion/ms3/Dockerfile
     volumes:
       - ./ingestion/data/ms3:/app/data
 
 networks:
   ingest_net:
     driver: bridge
-
