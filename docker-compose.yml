@@ -15,9 +15,11 @@ services:
       - ./ingestion/data/ms1:/app/data
     depends_on: []            # si algún día llamas a otro contenedor
 
-  ms2_ingest:
+    ms2_ingest:
     <<: *common
-    build: ./ingestion/ms2
+    build:
+      context: .
+      dockerfile: ingestion/ms2/Dockerfile
     volumes:
       - ./ingestion/data/ms2:/app/data
 
