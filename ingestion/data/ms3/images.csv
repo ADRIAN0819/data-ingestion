@@ -1,3 +1,4 @@
+id,filename,uploadDate,contentType,consultaId
 681ed5d0ec06b01f0407b634,images.png,2025-05-10T04:28:01.063Z,image/png,string
 681ed60dec06b01f0407b636,images.png,2025-05-10T04:29:01.499Z,image/png,test
 681ed612ec06b01f0407b638,images.png,2025-05-10T04:29:06.982Z,image/png,test

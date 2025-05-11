@@ -1,3 +1,4 @@
+id,nombre,especie,raza,edad,propietario
 1,string,string,string,2147483647,1
 2,Rebecca,Conejo,understand,16,4947
 3,James,Perro,scientist,3,2432
