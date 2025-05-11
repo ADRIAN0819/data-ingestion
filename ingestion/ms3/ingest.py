@@ -28,7 +28,6 @@ def main():
         try:
             logging.info("Descargando %s…", name)
             df = fetch(url)
-            df = df.iloc[1:]   # elimina la primera fila (cabecera)
             local = f"/app/data/{name}.csv"
             df.to_csv(local, index=False)
             upload_to_s3(local, BUCKET, f"{PREFIX}/{name}.csv")

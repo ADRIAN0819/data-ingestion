@@ -31,8 +31,6 @@ def main():
             logging.info("Descargando %s…", name)
             df = fetch(url)
 
-            df = df.iloc[1:]   
-
             # ───── NUEVO: subcarpeta local por recurso ─────
             local_dir = f"/app/data/{name}"
             os.makedirs(local_dir, exist_ok=True)   # crea p.ej. /app/data/mascotas
