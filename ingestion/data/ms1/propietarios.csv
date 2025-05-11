@@ -5328,3 +5328,11 @@ id,nombre,correo,telefono,mascotas
 5327,William Snyder,jeremy14@example.org,8866520275,"[{'id': 8499, 'nombre': 'Daniel', 'especie': 'Conejo', 'raza': 'fall', 'edad': 17, 'propietario': 5327}, {'id': 8734, 'nombre': 'Amanda', 'especie': 'Conejo', 'raza': 'enter', 'edad': 7, 'propietario': 5327}, {'id': 11364, 'nombre': 'Kristen', 'especie': 'Perro', 'raza': 'which', 'edad': 16, 'propietario': 5327}]"
 5328,Clifford Gonzalez,annaclark@example.com,0012485157050,"[{'id': 3524, 'nombre': 'Jimmy', 'especie': 'Loro', 'raza': 'my', 'edad': 20, 'propietario': 5328}]"
 5329,Charles Spencer,nicolebutler@example.com,6123906807,"[{'id': 4504, 'nombre': 'Christina', 'especie': 'Iguana', 'raza': 'each', 'edad': 13, 'propietario': 5329}, {'id': 5013, 'nombre': 'Rebecca', 'especie': 'Gato', 'raza': 'campaign', 'edad': 6, 'propietario': 5329}, {'id': 7205, 'nombre': 'Andrew', 'especie': 'Conejo', 'raza': 'not', 'edad': 5, 'propietario': 5329}, {'id': 10574, 'nombre': 'Peter', 'especie': 'Iguana', 'raza': 'whose', 'edad': 2, 'propietario': 5329}]"
+5330,Mark Russo,bdaniels@example.net,4142869954531,[]
+5331,David Santos,hlong@example.net,92071849445377,"[{'id': 12354, 'nombre': 'Cameron', 'especie': 'Loro', 'raza': 'Guacamayo', 'edad': 6, 'propietario': 5331}]"
+5332,Angela Scott,williamwu@example.org,0016822467135830,[]
+5333,Veronica Mcdonald,schultzkevin@example.com,17019663426,[]
+5334,Kelsey Ramirez,wmaxwell@example.org,25956350294840,[]
+5335,Cindy Bush,parsonstamara@example.org,87997266632033,[]
+5336,Amanda Perry,bramsey@example.net,8556867809427,[]
+5337,Clifford Cox,sierra35@example.net,00147037598648150,[]
