@@ -1,11 +1,4 @@
 id,filename,uploadDate,contentType,consultaId
-681ed5d0ec06b01f0407b634,images.png,2025-05-10T04:28:01.063Z,image/png,string
-681ed60dec06b01f0407b636,images.png,2025-05-10T04:29:01.499Z,image/png,test
-681ed612ec06b01f0407b638,images.png,2025-05-10T04:29:06.982Z,image/png,test
-681edce5ff017f027e908353,images.png,2025-05-10T04:58:13.39Z,image/png,LogoU
-681edd3bff017f027e908355,images.png,2025-05-10T04:59:39.12Z,image/png,LogoU
-681edd66ff017f027e908357,insta.jpg,2025-05-10T05:00:22.716Z,image/jpeg,LogoU
-681f98954a4638d3366562e1,insta.jpg,2025-05-10T18:19:02.159Z,image/jpeg,string
 681fc910805ff503927231bd,imagen_fake.png,2025-05-10T21:45:52.65Z,image/png,1508
 681fc910805ff503927231bf,imagen_fake.png,2025-05-10T21:45:52.99Z,image/png,183
 681fc911805ff503927231c1,imagen_fake.png,2025-05-10T21:45:53.24Z,image/png,1448
