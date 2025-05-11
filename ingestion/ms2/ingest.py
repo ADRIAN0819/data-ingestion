@@ -21,7 +21,9 @@ def fetch(url):
     return pd.json_normalize(rows, sep="_")
 
 def main():
-    os.makedirs("/app/data", exist_ok=True)
+    base_path = "/app/data/ms2"
+    os.makedirs(base_path, exist_ok=True)
+    
     for name, url in RESOURCES.items():
         if not url:
             logging.warning("%s: URL no definida; se omite", name)
@@ -29,9 +31,14 @@ def main():
         try:
             logging.info("Descargando %s…", name)
             df = fetch(url)
-            local = f"/app/data/{name}.csv"
+            
+            # Crear subcarpeta para cada archivo CSV
+            subfolder = os.path.join(base_path, name)
+            os.makedirs(subfolder, exist_ok=True)
+            
+            local = os.path.join(subfolder, f"{name}.csv")
             df.to_csv(local, index=False)
-            upload_to_s3(local, BUCKET, f"{PREFIX}/{name}.csv")
+            upload_to_s3(local, BUCKET, f"{PREFIX}/{name}/{name}.csv")
         except Exception as exc:
             logging.error("%s: error %s – no se sube", name, exc)
 
