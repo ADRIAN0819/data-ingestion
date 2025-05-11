@@ -40,12 +40,15 @@ def main() -> None:
             logging.info("Descargando %s…", name)
             df = fetch(url)
 
-            local = f"/app/data/{name}.csv"
-            df.to_csv(local, index=False)
+            subdir = f"/app/data/{name}"
+            os.makedirs(subdir, exist_ok=True)
+            local = f"{subdir}/{name}.csv"
 
+            df.to_csv(local, index=False)
             upload_to_s3(local, BUCKET, f"{PREFIX}/{name}.csv")
         except Exception as exc:
             logging.error("%s: error %s – no se sube este recurso", name, exc)
+
 
 # ─────────── Entry point ─────────────────────
 if __name__ == "__main__":

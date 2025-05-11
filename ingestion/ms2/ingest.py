@@ -20,20 +20,27 @@ def fetch(url):
         rows.extend(chunk)
     return pd.json_normalize(rows, sep="_")
 
-def main():
+def main() -> None:
     os.makedirs("/app/data", exist_ok=True)
+
     for name, url in RESOURCES.items():
         if not url:
-            logging.warning("%s: URL no definida; se omite", name)
+            logging.warning("%s: URL no definida, se omite", name)
             continue
+
         try:
             logging.info("Descargando %s…", name)
             df = fetch(url)
-            local = f"/app/data/{name}.csv"
+
+            subdir = f"/app/data/{name}"
+            os.makedirs(subdir, exist_ok=True)
+            local = f"{subdir}/{name}.csv"
+
             df.to_csv(local, index=False)
             upload_to_s3(local, BUCKET, f"{PREFIX}/{name}.csv")
         except Exception as exc:
-            logging.error("%s: error %s – no se sube", name, exc)
+            logging.error("%s: error %s – no se sube este recurso", name, exc)
+
 
 if __name__ == "__main__":
     main()
