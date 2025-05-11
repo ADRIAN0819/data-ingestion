@@ -1,4 +1,5 @@
 id,nombre,correo,telefono,mascotas
+1,string,user@example.com,string,"[{'id': 1, 'nombre': 'string', 'especie': 'string', 'raza': 'string', 'edad': 2147483647, 'propietario': 1}]"
 2,Justin Martin,ayerscindy@example.org,252.256.1805,[]
 3,Brandon Rogers,ericcarr@example.com,(707)316-1254x157,[]
 4,James Ruiz,tara23@example.org,605-584-3607,[]
